@@ -103,19 +103,19 @@ c
         write(6,*) buff1
 c
         open(26,file=buff1,status='unknown',form='formatted')
-        write(26,*)'x',',','y',',','concentration'
+        write(26,*)'i',',','k',',','x',',','y',',','concentration'
         do i=ixs,ixe
          do k=0,nz
-           write(26,*) x(i,k),',',z(i,k),',',yr_l(i,k)
+           write(26,601) i,k,x(i,k),z(i,k),yr_l(i,k)
          end do
         end do 
         close(26)
 c
         open(27,file=buff2,status='unknown',form='formatted')
-        write(27,*)'x',',','y',',','u',',','w'
+        write(27,*)'i',',','k',',','x',',','y',',','u',',','w'
         do i=ixs,ixe
          do k=0,nz
-           write(27,*) x(i,k),',',z(i,k),',',u_l(i,k),',',w_l(i,k)
+           write(27,701) i,k,x(i,k),z(i,k),u_l(i,k),w_l(i,k)
          end do
         end do 
         close(27)
@@ -143,5 +143,7 @@ c
  507  format('rslt00',i3,'.dat') 
  508  format('rslt0',i4,'.dat')  
  509  format('rslt',i5,'.dat')
+ 601  format(i4,',',i4,','f8.4,','f8.4,','f8.4)
+ 701  format(i4,',',i4,','f8.4,','f8.4,','f8.4,','f8.4)
 c
       end
