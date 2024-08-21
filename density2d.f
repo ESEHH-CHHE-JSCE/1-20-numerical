@@ -35,10 +35,10 @@ c     /  soralp: coefficient for sor acceleration
 c     /
 c     /  g   : gravity accelelation  
 c     /
-c     /  x   : phisical grid location of x at corner of cubic cell
-c     /  z   : phisical grid location of z at corner of cubic cell
-c     /  x_c : phisical grid location of x at center of cell
-c     /  z_c : phisical grid location of z at center of cell
+c     /  x   : physical grid location of x at corner of cubic cell
+c     /  z   : physical grid location of z at corner of cubic cell
+c     /  x_c : physical grid location of x at center of cell
+c     /  z_c : physical grid location of z at center of cell
 c     /  xi  : grid position of xi(0 to 1) at center of cell
 c     /  zeta : grid position of zeta(0 to 1) at center of cell
 c     /  dxi : grid cell size on xi deiraction
